@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BIDQuartzFunView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7TO-TK-8yo">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                <items>
+                                    <navigationItem id="v4X-d0-OZX">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Iwm-GV-0Bf">
+                                            <rect key="frame" x="20" y="7" width="560" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Red"/>
+                                                <segment title="Blue"/>
+                                                <segment title="Yellow"/>
+                                                <segment title="Green"/>
+                                                <segment title="Random"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="changeColor:" destination="8bC-Xf-vdC" eventType="valueChanged" id="UoV-xv-lGb"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPF-5Z-hgQ">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="d3M-LS-tr9">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="tDE-89-j7y">
+                                            <rect key="frame" x="20" y="7" width="441" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Line"/>
+                                                <segment title="Rect"/>
+                                                <segment title="Ellipse"/>
+                                                <segment title="Image"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="changeShape:" destination="8bC-Xf-vdC" eventType="valueChanged" id="8Jh-U7-tr8"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7TO-TK-8yo" secondAttribute="trailing" constant="-20" id="8Ze-it-878"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qPF-5Z-hgQ" secondAttribute="trailing" constant="-20" id="Jgj-L9-PAx"/>
+                            <constraint firstItem="7TO-TK-8yo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Vcw-tj-XQT"/>
+                            <constraint firstItem="qPF-5Z-hgQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="YMB-Uv-2hG"/>
+                            <constraint firstItem="7TO-TK-8yo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="khZ-Gz-KNE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qPF-5Z-hgQ" secondAttribute="bottom" id="ujv-kW-sxe"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="colorControl" destination="Iwm-GV-0Bf" id="2V6-lX-iLc"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="295"/>
+        </scene>
+    </scenes>
+</document>
